@@ -1,0 +1,10 @@
+"use strict";
+const express_1 = require("express");
+const controllers_1 = require("../controllers");
+const router = (0, express_1.Router)();
+router.get('/list', controllers_1.findAllUser);
+router.post('/create', controllers_1.createUser);
+router.delete('/delete/:id', controllers_1.deleteUser);
+router.get('/detail/:id', controllers_1.findById);
+router.put('/update', controllers_1.updateUser);
+module.exports = router;
